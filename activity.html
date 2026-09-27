@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Games</title>
+</head>
+
+<body>
+
+    <h1 id="main-heading">Online Games</h1>
+
+
+    <h2 id="images">Images</h2>
+
+    <p>
+        Online games are a popular form of digital entertainment.
+        They allow players to compete, cooperate, and interact with other players.
+    </p>
+
+    <img src="images/Dota 2.jpg"
+         alt="Dota 2"
+         width="300">
+
+    <img src="images/LOL.jpg"
+         alt="League of Legends"
+         width="300">
+
+    <figure>
+
+        <img src="images/Valorant.jpg"
+             alt="Valorant"
+             width="300">
+
+        <br>
+
+        <figcaption>
+            Valorant is a competitive online game where players work together in teams.
+        </figcaption>
+    </figure>
+
+
+    <h2 id="hyperlinks">Hyperlinks</h2>
+
+    <p>
+        <a href="activity.html#multimedia">
+            Internal Link: Go to the Multimedia section
+        </a>
+    </p>
+
+    <p>
+        <a href="https://www.minecraft.net/" target="_blank">
+            External Link: Visit Minecraft
+        </a>
+    </p>
+
+    <p>
+        <a href="mailto:giochuy543@gmail.com">
+            Email Link: Contact Me
+        </a>
+    </p>
+
+    <p>
+        <a href="#dom">
+            Jump to HTML DOM Section
+        </a>
+    </p>
+
+
+    <h2 id="multimedia">Multimedia</h2>
+
+    <h3>Audio</h3>
+
+    <audio controls>
+        <source src="media/audio.m4a" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h3>Video</h3>
+
+    <video controls width="500">
+        <source src="media/ml.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+
+    <h2 id="useful-tags">Useful Tags</h2>
+
+    <!-- I used the blockquote tag to display a statement separately from normal text. -->
+    <blockquote>
+        Online games can combine entertainment, teamwork, and problem-solving.
+    </blockquote>
+
+    <!-- I used the abbr tag to show the full meaning of a common online gaming term. -->
+    <p>
+        <abbr title="Massively Multiplayer Online">MMO</abbr>
+        games allow many players to play together online.
+    </p>
+
+    <!-- I used the mark tag to highlight an important part of online gaming. -->
+    <p>
+        Online games can encourage <mark>teamwork</mark> between players.
+    </p>
+
+    <p>
+        &copy; 2026 Online Games Activity
+    </p>
+
+
+    <h2 id="dom">HTML DOM</h2>
+
+    <!-- YOU NEED TO DO LATER:
+         After opening this page in your browser,
+         use Inspect/DevTools and take a screenshot of the DOM tree.
+         The screenshot must show at least 5 nested elements.
+         Save the screenshot in this project folder as "dom-tree.png". -->
+
+    <div id="dom-container">
+
+        <section id="dom-section">
+
+            <h3 id="dom-heading">Understanding the HTML DOM</h3>
+
+            <p>
+                The HTML DOM represents this online games webpage as a tree of elements.
+                Each element can have parent and child elements.
+            </p>
+
+            <ul>
+                <li>HTML is the main parent element.</li>
+                <li>Body is a child of HTML.</li>
+                <li>Headings and paragraphs are children of Body.</li>
+            </ul>
+
+        </section>
+
+    </div>
+
+
+    <!--
+    The div with the id "dom-container" is the parent of the section element.
+    The section element is the child of the div and is also the parent of the h3, p, and ul elements.
+    The ul element is the parent of the li elements.
+    The li elements are children of the ul element.
+    This shows how HTML elements are organized in a parent-child tree in the DOM.
+    -->
+
+</body>
+</html>
