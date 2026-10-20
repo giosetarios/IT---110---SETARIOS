@@ -1,0 +1,188 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Base and Typography */
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    background-color: #f2f2f2;
+    color: darkslategray;
+    line-height: 1.5;
+}
+
+h1, h2 {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/* Cascade: both rules target the intro paragraph.
+   The .intro rule wins because a class selector is more specific
+   than a type selector (p). */
+p {
+    color: gray;
+}
+
+.intro {
+    color: rgb(30, 80, 160);
+    font-size: 1.25rem;
+}
+
+/* Pseudo-element */
+.intro::first-letter {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+/* Layout */
+
+header,
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+main {
+    padding-bottom: 1rem;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+footer p {
+    color: white;
+}
+
+/* Navigation */
+
+nav a {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Pseudo-class */
+nav a:hover {
+    background-color: gold;
+    color: #333;
+}
+
+/* Cards */
+
+/* Total rendered width of one .card: 500px.
+   With box-sizing: border-box, the width already includes the padding
+   and border (content = 500 - 2*20 padding - 2*2 border = 456px). */
+.card {
+    width: 500px;
+    padding: 20px;
+    border: 2px solid #999;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Descendant selector */
+.card p {
+    margin-bottom: 10px;
+}
+
+#about {
+    position: relative;
+    border-color: crimson;
+    background-color: #fff8f8;
+}
+
+#about::after {
+    content: "Hello!";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 2px 8px;
+    background-color: crimson;
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 12px;
+}
+
+/* Skills */
+
+.skills-list {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+/* Child selector */
+.skills-list > li {
+    padding: 4px 12px;
+    background-color: #e0ecff;
+    color: #1e50a0;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Display and Visibility */
+
+.hide-none {
+    display: none;
+}
+
+.hide-visibility {
+    visibility: hidden;
+}
+
+/* Difference: display: none removes the paragraph completely, so it
+   takes no space and the next paragraph moves up. visibility: hidden
+   only makes it invisible, so an empty gap stays where it was. */
+
+.scroll-box {
+    height: 120px;
+    overflow: auto;
+}
+
+/* Reflection Answers
+
+   1. The p rule (gray) and the .intro rule (blue) both target the intro
+      paragraph. The .intro rule won because a class selector has higher
+      specificity than a type selector. Order only matters when
+      specificity is equal, and then the later rule wins.
+
+   2. With content-box, padding and border are added on top of the width:
+      500 + (2 x 20) + (2 x 2) = 544px.
+
+   3. I would use visibility: hidden when the layout must not shift, such
+      as an error message that appears later. I would use display: none
+      when the element should take no space at all.
+*/
