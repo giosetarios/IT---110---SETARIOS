@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="#home">Campus<span>Hub</span></a>
+
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <label>
+      Dark mode
+      <input type="checkbox" id="darkToggle">
+    </label>
+  </header>
+
+  <main>
+    <section class="card" id="home">
+      <div class="avatar">JD</div>
+      <h1>Gio Setarios</h1>
+      <p class="program">BS Information Technology, 3rd Year</p>
+
+      <ul class="tags">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+
+      <div class="actions">
+        <button id="likeBtn" class="btn primary">♥ Like <span id="likeCount">24</span></button>
+        <button id="resetBtn" class="btn outline">Reset</button>
+      </div>
+    </section>
+
+    <p id="note" hidden></p>
+  </main>
+
+  <footer>&copy; 2026 CampusHub. All rights reserved.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
